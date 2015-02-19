@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+    <title>publicradio.info</title>
+    <style type="text/css">
+      html {
+        border-top: 5px solid blue;
+        text-align: center;
+      }
+
+      div {
+        margin: 0 auto;
+        max-width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <header><img src="pr-header.jpg"></header>
+    <div id="main">
+      <h1>1. Main Program: "Jonny O: The Pirate's Story" (documentary) from KCRW's Cargoland.</h1>
+      <img src="feature.jpg"></header>
+      <audio src="http://cdn.reveal.prx.org/wp-content/uploads/Reveal-3-podcast.mp3" controls></audio>
+      <p><a href="http://feeds.kcrw.com/~r/kcrw/cg/~5/dTmraBbbcoY/cg_2014-12-06-123200.6929.mp3">Listen</a> | <a href="http://cargoland.kcrw.com/">Visit website</a> | <a href="http://feeds.kcrw.com/kcrw/cg">Subscribe</a></p>
+    </div>
+    <div id="news">
+      <h4>2. Latest News</h4>
+      <p>1. This hour's headlines from... <a href="http://wsdownload.bbc.co.uk/worldservice/css/96mp3/latest/bbcnewssummary.mp3">BBC</a> | <a href="<%= @latest_news["NPR"] %>">NPR</a></p>
+      <p>2. b. Analysis from... <a href="<%= @latest_news["BBC"] %>">BBC's World Service</a> | <a href="<%= @latest_news["PRI"] %>">PRI's The World</a></p>
+
+    </div>
+    <div id="selected_audio">
+      <h4>3. Featured Audio</h4>
+
+        <p>a. a. "Discovering The Cosmology of Bach" from On Being (interview/classical music)
+          <br />
+          <a href="http://www.podtrac.com/pts/redirect.mp3/feeds.soundcloud.com/stream/176762101-bernard-chazelle-discovering-the-cosmology-of-bach.mp3">Listen</a> | <a href="http://www.onbeing.org/program/bernard-chazelle-discovering-the-cosmology-of-bach/7026">Visit website</a> | <a href="http://www.onbeing.org/podcasts/podcast.xml">Subscribe</a>
+        </p>
+
+        <p>b. "Burroughs at 100" from Radio 4 via Third Coast (arts/documentary)
+          <br />
+          <a href="http://3rdcoast-features.s3.amazonaws.com/mp3s/1838/14_McNulty_Burroughs_At_100.mp3">Listen</a> | <a href="http://thirdcoastfestival.org/library/1598-burroughs-at-100">Visit website</a>
+        </p>
+
+        <p>c. War is a Drug" from CBC's Ideas (documentary)
+          <br />
+          <a href="http://podcast.cbc.ca/mp3/podcasts/ideas_20150209_82879.mp3">Listen</a> | <a href="http://www.cbc.ca/radio/ideas/chris-hedges-war-is-a-drug-1.2954759">Visit website</a> | <a href="http://www.cbc.ca/podcasting/includes/ideas.xml">Subscribe</a>
+        </p>
+
+        <p>d. "Nothing" from Radio 4's Short Cuts (storytelling)
+          <br />
+          <a href="http://downloads.bbc.co.uk/podcasts/radio4/shortcuts/shortcuts_20141104-1530a.mp3">Listen</a> | <a href="http://www.bbc.co.uk/programmes/b01mk3f8">Visit website</a> | <a href="http://downloads.bbc.co.uk/podcasts/radio4/shortcuts/rss.xml">Subscribe</a>
+        </p>
+
+        <p>e. "One-Star Review" from The Bugle (comedy/news) (explicit)
+          <br />
+          <a href="http://feeds.soundcloud.com/stream/181224384-the-bugle-bugle-281-one-star-review.mp3">Listen</a> | <a href="http://thebuglepodcast.com/bugle-281-one-star-review/">Visit website</a> | <a href="http://feeds.feedburner.com/thebuglefeed">Subscribe</a>
+        </p>
+
+        <p>f. f. "A Secret History of the Office" from Radiowest (interview)
+          <br />
+          <a href="http://cpa.ds.npr.org/radiowest/audio/2015/02/rw020515.mp3">Listen</a> | <a href="http://radiowest.kuer.org/post/secret-history-office-1">Visit website</a> | <a href="http://radiowest.kuer.org/feeds/220/rss.xml">Subscribe</a>
+        </p>
+
+        <p>g. "Laurel Halo with Mo Probs" from Berlin Community Radio (music mix/electronic)
+          <br />
+          <a href="https://soundcloud.com/berlincommunityradio/laurel-halo-with-mo-probs-berlin-community-radio-november-2014">Visit website</a>
+        </p>
+
+        <p>h. "Random and Pseudorandom" from Radio 4's In Our Time (humanities/discussion)
+          <br />
+          <a href="http://downloads.bbc.co.uk/podcasts/radio4/iots/iots_20110113-1055c.mp3">Listen</a> | <a href="http://www.bbc.co.uk/programmes/b00x9xjb">Visit website</a> | <a href="http://downloads.bbc.co.uk/podcasts/radio4/iot/rss.xml">Subscribe</a>
+        </p>
+
+        <p>i. "Play and Record" from Radio 4's Between the Ears (experimental)
+          <br />
+          <a href="http://downloads.bbc.co.uk/podcasts/radio3/bte/bte_20140118-2145a.mp3">Listen</a> | <a href="http://www.bbc.co.uk/programmes/b048bgjb">Visit website</a> | <a href="http://downloads.bbc.co.uk/podcasts/radio3/bte/rss.xml">Subscribe</a>
+        </p>
+    </div>
+
+    <div id="archives">
+      <h4>4. From the Archives</h4>
+      <p>"Louis Armstrong on Desert Island Discs" from Radio 4's Desert Island Discs (1968) (interview)
+        <br />
+        <a href="http://downloads.bbc.co.uk/podcasts/radio4/dida70/dida70_20150131-0102a.mp3">Download</a> | <a href="http://www.bbc.co.uk/programmes/p009y1rb">Visit website</a>
+
+      </p>
+    </div>
+
+    <div id="about">
+      <h4>5. About</h4>
+      <p>publicradio.info is your home for radio news and culture
+gathered from community stations and independent producers around the world. All these radio shows and podcasts are not-for-profit and ad-free; spread the love by supporting your local community radio station!</p>
+
+      <p>Updated monthly<br />
+      Last update: Wed, Feb. 18, 2015</p>
+
+      <p>We are a collaboration between...</p>
+      <p>edited by...</p>
+    </div>
+
+    <footer><img src="pr-footer.jpg" /></footer>
+  </body>
+</html>
