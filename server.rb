@@ -5,8 +5,8 @@ class App < Sinatra::Base
     send_file 'public/index.html'
   end
 
-  get '/pr-header.jpg' do
-    send_file 'public/images/pr-header.jpg'
+  get '/pr-header.png' do
+    send_file 'public/images/pr-header.png'
   end
 
   get '/pr-footer.jpg' do
