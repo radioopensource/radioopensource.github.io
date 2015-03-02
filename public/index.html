@@ -1,7 +1,6 @@
 <!DOCTYPE HTML>
-<html>
+<html ng-app="dotInfo">
   <head>
-    <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
     <title>publicradio.info</title>
     <style type="text/css">
       html {
@@ -14,19 +13,26 @@
         max-width: 500px;
       }
     </style>
+
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular-resource/angular-resource.min.js"></script>
+    <script src="lib/app.js"></script>
   </head>
   <body>
-    <header><img src="pr-header.jpg"></header>
+    <header>
+      <img src="pr-header.jpg">
+    </header>
+
     <div id="main">
-      <h1>1. Main Program: "Jonny O: The Pirate's Story" (documentary) from KCRW's Cargoland.</h1>
-      <img src="feature.jpg"></header>
+      <h1>1. Main Program: "Jonny O: The Pirate's Story" (documentary) from KCRW's Cargoland.</h1>
+      <img src="feature.jpg">
       <audio src="http://cdn.reveal.prx.org/wp-content/uploads/Reveal-3-podcast.mp3" controls></audio>
       <p><a href="http://feeds.kcrw.com/~r/kcrw/cg/~5/dTmraBbbcoY/cg_2014-12-06-123200.6929.mp3">Listen</a> | <a href="http://cargoland.kcrw.com/">Visit website</a> | <a href="http://feeds.kcrw.com/kcrw/cg">Subscribe</a></p>
     </div>
-    <div id="news">
+    <div id="news" ng-controller="NewsController as ctrl">
       <h4>2. Latest News</h4>
-      <p>1. This hour's headlines from... <a href="http://wsdownload.bbc.co.uk/worldservice/css/96mp3/latest/bbcnewssummary.mp3">BBC</a> | <a href="<%= @latest_news["NPR"] %>">NPR</a></p>
-      <p>2. b. Analysis from... <a href="<%= @latest_news["BBC"] %>">BBC's World Service</a> | <a href="<%= @latest_news["PRI"] %>">PRI's The World</a></p>
+      <p>1. This hour's headlines from... <a href="http://wsdownload.bbc.co.uk/worldservice/css/96mp3/latest/bbcnewssummary.mp3">BBC</a> | <a href={{feeds["NPR"]}}>NPR</a></p>
+      <p>2. b. Analysis from... <a href={{feeds["BBC"]}}>BBC's World Service</a> | <a href={{feeds["PRI"]}}>PRI's The World</a></p>
 
     </div>
     <div id="selected_audio">
@@ -57,7 +63,7 @@
           <a href="http://feeds.soundcloud.com/stream/181224384-the-bugle-bugle-281-one-star-review.mp3">Listen</a> | <a href="http://thebuglepodcast.com/bugle-281-one-star-review/">Visit website</a> | <a href="http://feeds.feedburner.com/thebuglefeed">Subscribe</a>
         </p>
 
-        <p>f. f. "A Secret History of the Office" from Radiowest (interview)
+        <p>f. "A Secret History of the Office" from Radiowest (interview)
           <br />
           <a href="http://cpa.ds.npr.org/radiowest/audio/2015/02/rw020515.mp3">Listen</a> | <a href="http://radiowest.kuer.org/post/secret-history-office-1">Visit website</a> | <a href="http://radiowest.kuer.org/feeds/220/rss.xml">Subscribe</a>
         </p>
@@ -99,6 +105,8 @@ gathered from community stations and independent producers around the world. All
       <p>edited by...</p>
     </div>
 
-    <footer><img src="pr-footer.jpg" /></footer>
+    <footer>
+      <img src="pr-footer.jpg" />
+    </footer>
   </body>
 </html>
