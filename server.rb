@@ -1,19 +1,16 @@
 require 'sinatra/base'
+require './feed_parser'
 
 class App < Sinatra::Base
+  include FeedParser
+
   get '/' do
-    send_file 'public/index.html'
-  end
+    recents = most_recent_items
 
-  get '/pr-header.png' do
-    send_file 'public/images/pr-header.png'
-  end
+    @npr = recents["NPR"]
+    @pri = recents["PRI"]
+    @bbc = recents["BBC"]
 
-  get '/pr-footer.jpg' do
-    send_file 'public/images/pr-footer.jpg'
-  end
-
-  get '/feature.jpg' do
-    send_file 'public/images/feature.jpg'
+    erb :index
   end
 end

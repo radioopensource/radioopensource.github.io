@@ -1,10 +1,10 @@
-require 'feedjira'
 require 'nokogiri'
+require 'feedjira'
 
 module FeedParser
   URLS = {
     "NPR" => "http://www.npr.org/rss/podcast.php?id=500005",
-    "BBC" => "http://downloads.bbc.co.uk/podcasts/worldservice/globalnews/rss.xml",
+    "BBC" => "http://downloads.bbc.co.uk/podcasts/worldservice/newshour/rss.xml",
     "PRI" => "http://feeds.feedburner.com/pri/theworld?format=xml"
   }
 
