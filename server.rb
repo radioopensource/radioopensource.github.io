@@ -13,4 +13,8 @@ class App < Sinatra::Base
 
     erb :index
   end
+
+  get '/favicon' do
+    send_file "public/favicon.ico"
+  end
 end
